@@ -1,0 +1,10 @@
+@startuml
+Left to right direction
+:Utilisateur: as u
+rectangle site {
+    usecase (Visualiser \nles produits) as UC1
+    usecase (Rechercher \ndes produits) as UC2
+}
+u --> UC1
+u --> UC2
+@enduml

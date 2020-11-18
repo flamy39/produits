@@ -3,10 +3,32 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css"  crossorigin="anonymous">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
         {% block stylesheets %}{% endblock %}
+        <style>
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-gap: 20px;
+            }
+
+            .fixe-formulaire {
+                display: block;
+                position: sticky;
+                top: 10px;
+            }
+        </style>
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <nav class="navbar navbar-dark bg-primary">
+            <a href="/" class="navbar-brand mb-0 h1">Ma petite entreprise</a>
+        </nav>
+        <div class="mt-3">
+            {% block body %}{% endblock %}
+        </div>
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>

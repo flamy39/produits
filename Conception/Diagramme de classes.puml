@@ -1,0 +1,17 @@
+@startuml
+
+Produit "*" -- "1..*" Categorie: appartient >
+
+class Produit {
+    -id : integer
+    -nom : string
+    -description : text
+    -prix : integer
+    -promo : boolean
+}
+
+class Categorie {
+    -id : integer
+    -nom : string
+}
+@enduml
